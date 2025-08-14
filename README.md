@@ -1,1 +1,1 @@
-# DestinosM-xico
+# DestinosMéxico
