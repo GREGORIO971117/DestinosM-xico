@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Destinos</title>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+
+
+  <div class="container my-4">
+    <div id="hotel-list"></div>
+  </div>
+
+
+  <div class="modal fade" id="modalDestino" tabindex="-1" aria-labelledby="modalDestinoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDestinoLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalDestinoImg" src="" alt="" class="img-fluid mb-3 rounded" style="max-height:220px;object-fit:cover;">
+          <p id="modalDestinoDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div id="footer-container"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script/destinos.js"></script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el navbar:", error));
+    </script>
+
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el navbar:", error));
+    </script>
+  </body>
+</html>

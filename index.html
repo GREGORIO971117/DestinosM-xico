@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Destinos México</title>
+</head>
+<body>
+
+
+    <div id="navbar-container"></div>
+
+<div class="container-flow portada">
+      <div class="row">
+        <div class="col-12">
+          <h1>Descubre tu paraíso frente al mar.</h1>
+        </div>
+      </div>
+</div>
+
+<div id="carouselExample" class="carousel slide">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <div class="position-relative" style="height: 600px;">
+        <img src="./sources/playa_1.jpg" class="fondo" alt="playa">
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="position-relative" style="height: 600px;">
+        <img src="./sources/Huatulco.jpg" class="fondo" alt="playa">
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="position-relative" style="height: 600px;">
+        <img src="./sources/Mira Mar.jpg" class="fondo" alt="playa">
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="position-relative" style="height: 600px;">
+        <img src="./sources/puertoVallarta.jpg" class="fondo" alt="playa">
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div id="footer-container"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+<script>
+    fetch('navbar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('navbar-container').innerHTML = data;
+  })
+  .catch(error => console.error('Error al cargar el navbar:', error));
+</script>
+<script>
+    fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-container').innerHTML = data;
+  })
+  .catch(error => console.error('Error al cargar el navbar:', error));
+</script>
+
+</body>
+</html>

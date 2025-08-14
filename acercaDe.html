@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>AcercaDe</title>
+  </head>
+
+  
+  <body>
+    <div id="navbar-container"></div>
+
+    <div class="container-fluid px-0">
+      <div class="row g-0 text-center" style="min-height: 90vh">
+        <div
+          class="col-md-4 d-flex flex-column justify-content-center align-items-center"
+          style="background-color: #02202b; color: #fff; min-height: 400px"
+        >
+          <div class="mb-4">
+            <img
+              src="./sources/usuario.svg"
+              alt=""
+              style="width: 50px; height: 50px"
+            />
+          </div>
+          <h2 class="fw-bold mb-3">Misión</h2>
+          <p class="fs-5" style="max-width: 370px">
+            Misión: Nuestra misión es crear experiencias de viaje inolvidables y
+            personalizadas que enriquezcan la vida de nuestros clientes,
+            conectándolos con el mundo y sus culturas de una manera auténtica y
+            significativa.
+          </p>
+        </div>
+        <div
+          class="col-md-4 d-flex flex-column justify-content-center align-items-center"
+          style="background-color: #f3ad14; color: #222; min-height: 400px"
+        >
+          <div class="mb-4">
+            <img
+              src="./sources/hogar.svg"
+              alt=""
+              style="width: 50px; height: 50px"
+            />
+          </div>
+          <h2 class="fw-bold mb-3">Visión</h2>
+          <p class="fs-5" style="max-width: 370px">
+            Ser la agencia de viajes líder y de referencia en el mercado,
+            reconocida por nuestra excelencia en el servicio al cliente, nuestra
+            innovación en la oferta de destinos sostenibles y nuestro compromiso
+            con la creación de valor para la comunidad de viajeros.
+          </p>
+        </div>
+        <div
+          class="col-md-4 d-flex flex-column justify-content-center align-items-center"
+          style="background-color: #fff; color: #222; min-height: 400px"
+        >
+          <div class="mb-4">
+            <img
+              src="./sources/corazon.svg"
+              alt=""
+              style="width: 50px; height: 50px"
+            />
+          </div>
+          <h2 class="fw-bold mb-3">Filosofía</h2>
+          <p class="fs-5" style="max-width: 370px">
+            Excelencia en el servicio: Nos esforzamos por superar las
+            expectativas. Desde la primera consulta hasta el regreso a casa, nos
+            comprometemos a ofrecer una atención al cliente excepcional,
+            transparente y empática.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el navbar:", error));
+    </script>
+
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error al cargar el navbar:", error));
+    </script>
+  </body>
+</html>
